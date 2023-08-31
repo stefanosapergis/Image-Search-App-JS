@@ -4,6 +4,7 @@ const formEl = document.querySelector("form");
 const inputEl = document.getElementById("search-text");
 const searchResults = document.querySelector(".search-results");
 const showMore = document.getElementById("show-more-button");
+const buttonEl = document.getElementById("button-one");
 
 let inputData = "";
 let page = 1;
@@ -46,6 +47,10 @@ formEl.addEventListener("submit", (event) =>{
     event.preventDefault()
     page = 1;
     searchImages()
+});
+
+buttonEl.addEventListener("click", () =>{
+    searchImages();
 });
 
 showMore.addEventListener("click", () =>{
